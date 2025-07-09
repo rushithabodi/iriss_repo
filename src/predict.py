@@ -1,17 +1,17 @@
 import pandas as pd
 import joblib
 
-# Load model
-model = joblib.load('iris_model.pkl')
+# Load trained model
+model = joblib.load('iris_knn_model.pkl')
 
-# Sample input (change values as needed)
+# Sample data to predict
 sample = pd.DataFrame({
-    'sepal_length': [5.1],
-    'sepal_width': [3.5],
-    'petal_length': [1.4],
-    'petal_width': [0.2]
+    'sepal_length': [6.1],
+    'sepal_width': [2.9],
+    'petal_length': [4.7],
+    'petal_width': [1.4]
 })
 
-# Predict
+# Make prediction
 prediction = model.predict(sample)[0]
 print(f"🌸 Predicted Iris class: {prediction}")
