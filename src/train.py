@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 import joblib
 
 
-df = pd.read_csv('iris.data', header=None)
+df = pd.read_csv('data/iris.data', header=None)
 df.columns = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class']
 
 
